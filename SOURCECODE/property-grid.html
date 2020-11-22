@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>Agents</title>
+  <title>Property</title>
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
   <meta content="" name="keywords">
   <meta content="" name="description">
@@ -16,7 +16,7 @@
 </head>
 
 <body>
-
+  <div class="click-closed"></div>
   <div class="box-collapse">
     <div class="title-box-d">
       <h3 class="title-d">Search Property</h3>
@@ -128,10 +128,10 @@
             <a class="nav-link" href="aboutus.html">About</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="property-grid.html">Property</a>
+            <a class="nav-link active" href="property-grid.html">Property</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link active" href="agents-grid.html">Agent</a>
+            <a class="nav-link" href="agents-grid.html">Agent</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#">Contact Us</a>
@@ -149,8 +149,8 @@
       <div class="row">
         <div class="col-md-12 col-lg-8">
           <div class="title-single-box">
-            <h1 class="title-single">Agent Properti Kami</h1>
-            <span class="color-text-a">El Hogar</span>
+            <h1 class="title-single">List Properti</h1>
+            <span class="color-text-a">Rumah/Apartment/Kavling</span>
           </div>
         </div>
         <div class="col-md-12 col-lg-4">
@@ -160,7 +160,7 @@
                 <a href="home.html">Home</a>
               </li>
               <li class="breadcrumb-item active" aria-current="page">
-                Agent
+                Property
               </li>
             </ol>
           </nav>
@@ -168,61 +168,61 @@
       </div>
     </div>
   </section>
-  <section class="agents-grid grid">
+  <section class="property-grid grid">
     <div class="container">
       <div class="row">
+        <div class="col-sm-12">
+          <div class="grid-option">
+            <form>
+              <select class="custom-select">
+                <option selected>Semua</option>
+                <option value="1">Terbaru</option>
+                <option value="2">Di Sewakan</option>
+                <option value="3">Di Jual</option>
+              </select>
+            </form>
+          </div>
+        </div>
         <div class="col-md-4">
-          <div class="card-box-d">
-            <div class="card-img-d">
-              <img src="img/agent-4.jpg" alt="" class="img-d img-fluid">
+          <div class="card-box-a card-shadow">
+            <div class="img-box-a">
+              <img src="img/property-10.jpg" alt="" class="img-a img-fluid">
             </div>
-            <div class="card-overlay card-overlay-hover">
-              <div class="card-header-d">
-                <div class="card-title-d align-self-center">
-                  <h3 class="title-d">
-                    <a href="#" class="link-two">Jasmine
-                      <br> Kezia</a>
-                  </h3>
+            <div class="card-overlay">
+              <div class="card-overlay-a-content">
+                <div class="card-header-a">
+                  <h2 class="card-title-a">
+                    <a href="#">AN House,
+                      <br /> Jakarta Selatan</a>
+                  </h2>
                 </div>
-              </div>
-              <div class="card-body-d">
-                <p class="content-d color-text-a">
-                  “This is a new year. A new beginning. And things will change.”
-                </p>
-                <div class="info-agents color-a">
-                  <p>
-                    <strong>Phone: </strong> +62 877 1914 2976</p>
-                  <p>
-                    <strong>Email: </strong> jasmine@gmail.com</p>
+                <div class="card-body-a">
+                  <div class="price-box d-flex">
+                    <span class="price-a">Jual - Rp 1,5 Miliar</span>
+                  </div>
+                  <a href="property-single.html" class="link-a">Click here to view
+                    <span class="ion-ios-arrow-forward"></span>
+                  </a>
                 </div>
-              </div>
-              <div class="card-footer-d">
-                <div class="socials-footer d-flex justify-content-center">
-                  <ul class="list-inline">
-                    <li class="list-inline-item">
-                      <a href="#" class="link-one">
-                        <i class="fa fa-facebook" aria-hidden="true"></i>
-                      </a>
+                <div class="card-footer-a">
+                  <ul class="card-info d-flex justify-content-around">
+                    <li>
+                      <h4 class="card-info-title">Luas</h4>
+                      <span>210m
+                        <sup>2</sup>
+                      </span>
                     </li>
-                    <li class="list-inline-item">
-                      <a href="#" class="link-one">
-                        <i class="fa fa-twitter" aria-hidden="true"></i>
-                      </a>
+                    <li>
+                      <h4 class="card-info-title">Kamar</h4>
+                      <span>3</span>
                     </li>
-                    <li class="list-inline-item">
-                      <a href="#" class="link-one">
-                        <i class="fa fa-instagram" aria-hidden="true"></i>
-                      </a>
+                    <li>
+                      <h4 class="card-info-title">Toilet</h4>
+                      <span>2</span>
                     </li>
-                    <li class="list-inline-item">
-                      <a href="#" class="link-one">
-                        <i class="fa fa-pinterest-p" aria-hidden="true"></i>
-                      </a>
-                    </li>
-                    <li class="list-inline-item">
-                      <a href="#" class="link-one">
-                        <i class="fa fa-dribbble" aria-hidden="true"></i>
-                      </a>
+                    <li>
+                      <h4 class="card-info-title">Parkiran</h4>
+                      <span>1</span>
                     </li>
                   </ul>
                 </div>
@@ -231,57 +231,45 @@
           </div>
         </div>
         <div class="col-md-4">
-          <div class="card-box-d">
-            <div class="card-img-d">
-              <img src="img/agent-2.jpg" alt="" class="img-d img-fluid">
+          <div class="card-box-a card-shadow">
+            <div class="img-box-a">
+              <img src="img/property-8.jpg" alt="" class="img-a img-fluid">
             </div>
-            <div class="card-overlay card-overlay-hover">
-              <div class="card-header-d">
-                <div class="card-title-d align-self-center">
-                  <h3 class="title-d">
-                    <a href="#" class="link-two">Wilson
-                      <br> Wibowo</a>
-                  </h3>
+            <div class="card-overlay">
+              <div class="card-overlay-a-content">
+                <div class="card-header-a">
+                  <h2 class="card-title-a">
+                    <a href="#">Sunrise Apartment,
+                      <br /> Tangerang Selatan</a>
+                  </h2>
                 </div>
-              </div>
-              <div class="card-body-d">
-                <p class="content-d color-text-a">
-                  "Rumah adalah salah satu kebutuhan pokok manusia"
-                </p>
-                <div class="info-agents color-a">
-                  <p>
-                    <strong>Phone: </strong> +62 854 2655 8744</p>
-                  <p>
-                    <strong>Email: </strong> wilson@gmail.com</p>
+                <div class="card-body-a">
+                  <div class="price-box d-flex">
+                    <span class="price-a">Jual - Rp 600 Juta</span>
+                  </div>
+                  <a href="property-single.html" class="link-a">Click here to view
+                    <span class="ion-ios-arrow-forward"></span>
+                  </a>
                 </div>
-              </div>
-              <div class="card-footer-d">
-                <div class="socials-footer d-flex justify-content-center">
-                  <ul class="list-inline">
-                    <li class="list-inline-item">
-                      <a href="#" class="link-one">
-                        <i class="fa fa-facebook" aria-hidden="true"></i>
-                      </a>
+                <div class="card-footer-a">
+                  <ul class="card-info d-flex justify-content-around">
+                    <li>
+                      <h4 class="card-info-title">Luas</h4>
+                      <span>40m
+                        <sup>2</sup>
+                      </span>
                     </li>
-                    <li class="list-inline-item">
-                      <a href="#" class="link-one">
-                        <i class="fa fa-twitter" aria-hidden="true"></i>
-                      </a>
+                    <li>
+                      <h4 class="card-info-title">Kamar</h4>
+                      <span>1</span>
                     </li>
-                    <li class="list-inline-item">
-                      <a href="#" class="link-one">
-                        <i class="fa fa-instagram" aria-hidden="true"></i>
-                      </a>
+                    <li>
+                      <h4 class="card-info-title">Toilet</h4>
+                      <span>1</span>
                     </li>
-                    <li class="list-inline-item">
-                      <a href="#" class="link-one">
-                        <i class="fa fa-pinterest-p" aria-hidden="true"></i>
-                      </a>
-                    </li>
-                    <li class="list-inline-item">
-                      <a href="#" class="link-one">
-                        <i class="fa fa-dribbble" aria-hidden="true"></i>
-                      </a>
+                    <li>
+                      <h4 class="card-info-title">Parkiran</h4>
+                      <span>-</span>
                     </li>
                   </ul>
                 </div>
@@ -290,57 +278,45 @@
           </div>
         </div>
         <div class="col-md-4">
-          <div class="card-box-d">
-            <div class="card-img-d">
-              <img src="img/agent-6.jpg" alt="" class="img-d img-fluid">
+          <div class="card-box-a card-shadow">
+            <div class="img-box-a">
+              <img src="img/property-7.jpg" alt="" class="img-a img-fluid">
             </div>
-            <div class="card-overlay card-overlay-hover">
-              <div class="card-header-d">
-                <div class="card-title-d align-self-center">
-                  <h3 class="title-d">
-                    <a href="#" class="link-two">Sukarjo
-                      <br> Winarko</a>
-                  </h3>
+            <div class="card-overlay">
+              <div class="card-overlay-a-content">
+                <div class="card-header-a">
+                  <h2 class="card-title-a">
+                    <a href="#">NV House,
+                      <br /> Banjarmasin</a>
+                  </h2>
                 </div>
-              </div>
-              <div class="card-body-d">
-                <p class="content-d color-text-a">
-                  "Kita boleh banyak uang, tapi jangan lupa.. beli lah tanah dan rumah"
-                </p>
-                <div class="info-agents color-a">
-                  <p>
-                    <strong>Phone: </strong> +62 356 6969 7854</p>
-                  <p>
-                    <strong>Email: </strong> sukarjo@gmail.com</p>
+                <div class="card-body-a">
+                  <div class="price-box d-flex">
+                    <span class="price-a">Jual - Rp 550 Juta</span>
+                  </div>
+                  <a href="property-single.html" class="link-a">Click here to view
+                    <span class="ion-ios-arrow-forward"></span>
+                  </a>
                 </div>
-              </div>
-              <div class="card-footer-d">
-                <div class="socials-footer d-flex justify-content-center">
-                  <ul class="list-inline">
-                    <li class="list-inline-item">
-                      <a href="#" class="link-one">
-                        <i class="fa fa-facebook" aria-hidden="true"></i>
-                      </a>
+                <div class="card-footer-a">
+                  <ul class="card-info d-flex justify-content-around">
+                    <li>
+                      <h4 class="card-info-title">Luas</h4>
+                      <span>130m
+                        <sup>2</sup>
+                      </span>
                     </li>
-                    <li class="list-inline-item">
-                      <a href="#" class="link-one">
-                        <i class="fa fa-twitter" aria-hidden="true"></i>
-                      </a>
+                    <li>
+                      <h4 class="card-info-title">Kamar</h4>
+                      <span>2</span>
                     </li>
-                    <li class="list-inline-item">
-                      <a href="#" class="link-one">
-                        <i class="fa fa-instagram" aria-hidden="true"></i>
-                      </a>
+                    <li>
+                      <h4 class="card-info-title">Toilet</h4>
+                      <span>2</span>
                     </li>
-                    <li class="list-inline-item">
-                      <a href="#" class="link-one">
-                        <i class="fa fa-pinterest-p" aria-hidden="true"></i>
-                      </a>
-                    </li>
-                    <li class="list-inline-item">
-                      <a href="#" class="link-one">
-                        <i class="fa fa-dribbble" aria-hidden="true"></i>
-                      </a>
+                    <li>
+                      <h4 class="card-info-title">Parkiran</h4>
+                      <span>1</span>
                     </li>
                   </ul>
                 </div>
@@ -349,57 +325,45 @@
           </div>
         </div>
         <div class="col-md-4">
-          <div class="card-box-d">
-            <div class="card-img-d">
-              <img src="img/agent-3.jpg" alt="" class="img-d img-fluid">
+          <div class="card-box-a card-shadow">
+            <div class="img-box-a">
+              <img src="img/property-6.jpg" alt="" class="img-a img-fluid">
             </div>
-            <div class="card-overlay card-overlay-hover">
-              <div class="card-header-d">
-                <div class="card-title-d align-self-center">
-                  <h3 class="title-d">
-                    <a href="#" class="link-two">Jesslyn
-                      </a>
-                  </h3>
+            <div class="card-overlay">
+              <div class="card-overlay-a-content">
+                <div class="card-header-a">
+                  <h2 class="card-title-a">
+                    <a href="#">J House,
+                      <br /> Padang</a>
+                  </h2>
                 </div>
-              </div>
-              <div class="card-body-d">
-                <p class="content-d color-text-a">
-                  "엉덩이가 바지를 먹었어"
-                </p>
-                <div class="info-agents color-a">
-                  <p>
-                    <strong>Phone: </strong> +62 785 1452 6645</p>
-                  <p>
-                    <strong>Email: </strong> jesslyn@gmail.com</p>
+                <div class="card-body-a">
+                  <div class="price-box d-flex">
+                    <span class="price-a">Jual - Rp 790 Juta</span>
+                  </div>
+                  <a href="property-single.html" class="link-a">Click here to view
+                    <span class="ion-ios-arrow-forward"></span>
+                  </a>
                 </div>
-              </div>
-              <div class="card-footer-d">
-                <div class="socials-footer d-flex justify-content-center">
-                  <ul class="list-inline">
-                    <li class="list-inline-item">
-                      <a href="#" class="link-one">
-                        <i class="fa fa-facebook" aria-hidden="true"></i>
-                      </a>
+                <div class="card-footer-a">
+                  <ul class="card-info d-flex justify-content-around">
+                    <li>
+                      <h4 class="card-info-title">Luas</h4>
+                      <span>142m
+                        <sup>2</sup>
+                      </span>
                     </li>
-                    <li class="list-inline-item">
-                      <a href="#" class="link-one">
-                        <i class="fa fa-twitter" aria-hidden="true"></i>
-                      </a>
+                    <li>
+                      <h4 class="card-info-title">Kamar</h4>
+                      <span>3</span>
                     </li>
-                    <li class="list-inline-item">
-                      <a href="#" class="link-one">
-                        <i class="fa fa-instagram" aria-hidden="true"></i>
-                      </a>
+                    <li>
+                      <h4 class="card-info-title">Toilet</h4>
+                      <span>2</span>
                     </li>
-                    <li class="list-inline-item">
-                      <a href="#" class="link-one">
-                        <i class="fa fa-pinterest-p" aria-hidden="true"></i>
-                      </a>
-                    </li>
-                    <li class="list-inline-item">
-                      <a href="#" class="link-one">
-                        <i class="fa fa-dribbble" aria-hidden="true"></i>
-                      </a>
+                    <li>
+                      <h4 class="card-info-title">Parkiran</h4>
+                      <span>1</span>
                     </li>
                   </ul>
                 </div>
@@ -408,57 +372,45 @@
           </div>
         </div>
         <div class="col-md-4">
-          <div class="card-box-d">
-            <div class="card-img-d">
-              <img src="img/agent-1.jpg" alt="" class="img-d img-fluid">
+          <div class="card-box-a card-shadow">
+            <div class="img-box-a">
+              <img src="img/property-9.jpg" alt="" class="img-a img-fluid">
             </div>
-            <div class="card-overlay card-overlay-hover">
-              <div class="card-header-d">
-                <div class="card-title-d align-self-center">
-                  <h3 class="title-d">
-                    <a href="#" class="link-two">Nathanael
-                      <br> Victorious</a>
-                  </h3>
+            <div class="card-overlay">
+              <div class="card-overlay-a-content">
+                <div class="card-header-a">
+                  <h2 class="card-title-a">
+                    <a href="#">Kavling RK,
+                      <br /> Denpasar</a>
+                  </h2>
                 </div>
-              </div>
-              <div class="card-body-d">
-                <p class="content-d color-text-a">
-                  "Jangan pernah melihat kebelakang, tetap maju terus!"
-                </p>
-                <div class="info-agents color-a">
-                  <p>
-                    <strong>Phone: </strong> +62 822 9927 8719</p>
-                  <p>
-                    <strong>Email: </strong> nathanael@gmail.com</p>
+                <div class="card-body-a">
+                  <div class="price-box d-flex">
+                    <span class="price-a">Jual - Rp 1,05 Miliar</span>
+                  </div>
+                  <a href="property-single.html" class="link-a">Click here to view
+                    <span class="ion-ios-arrow-forward"></span>
+                  </a>
                 </div>
-              </div>
-              <div class="card-footer-d">
-                <div class="socials-footer d-flex justify-content-center">
-                  <ul class="list-inline">
-                    <li class="list-inline-item">
-                      <a href="#" class="link-one">
-                        <i class="fa fa-facebook" aria-hidden="true"></i>
-                      </a>
+                <div class="card-footer-a">
+                  <ul class="card-info d-flex justify-content-around">
+                    <li>
+                      <h4 class="card-info-title">Luas</h4>
+                      <span>250m
+                        <sup>2</sup>
+                      </span>
                     </li>
-                    <li class="list-inline-item">
-                      <a href="#" class="link-one">
-                        <i class="fa fa-twitter" aria-hidden="true"></i>
-                      </a>
+                    <li>
+                      <h4 class="card-info-title">Kamar</h4>
+                      <span>-</span>
                     </li>
-                    <li class="list-inline-item">
-                      <a href="#" class="link-one">
-                        <i class="fa fa-instagram" aria-hidden="true"></i>
-                      </a>
+                    <li>
+                      <h4 class="card-info-title">Toilet</h4>
+                      <span>-</span>
                     </li>
-                    <li class="list-inline-item">
-                      <a href="#" class="link-one">
-                        <i class="fa fa-pinterest-p" aria-hidden="true"></i>
-                      </a>
-                    </li>
-                    <li class="list-inline-item">
-                      <a href="#" class="link-one">
-                        <i class="fa fa-dribbble" aria-hidden="true"></i>
-                      </a>
+                    <li>
+                      <h4 class="card-info-title">Parkiran</h4>
+                      <span>-</span>
                     </li>
                   </ul>
                 </div>
@@ -467,57 +419,45 @@
           </div>
         </div>
         <div class="col-md-4">
-          <div class="card-box-d">
-            <div class="card-img-d">
-              <img src="img/agent-5.jpg" alt="" class="img-d img-fluid">
+          <div class="card-box-a card-shadow">
+            <div class="img-box-a">
+              <img src="img/property-5.jpg" alt="" class="img-a img-fluid">
             </div>
-            <div class="card-overlay card-overlay-hover">
-              <div class="card-header-d">
-                <div class="card-title-d align-self-center">
-                  <h3 class="title-d">
-                    <a href="#" class="link-two">Andrean
-                      <br> Setiawan</a>
-                  </h3>
+            <div class="card-overlay">
+              <div class="card-overlay-a-content">
+                <div class="card-header-a">
+                  <h2 class="card-title-a">
+                    <a href="#">Atalantic Apartment,
+                      <br /> Raja Ampat</a>
+                  </h2>
                 </div>
-              </div>
-              <div class="card-body-d">
-                <p class="content-d color-text-a">
-                  "Panggil saya, maka saya menjamin rumah anda terjual hanya dalam waktu 10 hari"
-                </p>
-                <div class="info-agents color-a">
-                  <p>
-                    <strong>Phone: </strong> +62 771 1845 9663</p>
-                  <p>
-                    <strong>Email: </strong> andrean@gmail.com</p>
+                <div class="card-body-a">
+                  <div class="price-box d-flex">
+                    <span class="price-a">Jual - Rp 2,2 Miliar</span>
+                  </div>
+                  <a href="property-single.html" class="link-a">Click here to view
+                    <span class="ion-ios-arrow-forward"></span>
+                  </a>
                 </div>
-              </div>
-              <div class="card-footer-d">
-                <div class="socials-footer d-flex justify-content-center">
-                  <ul class="list-inline">
-                    <li class="list-inline-item">
-                      <a href="#" class="link-one">
-                        <i class="fa fa-facebook" aria-hidden="true"></i>
-                      </a>
+                <div class="card-footer-a">
+                  <ul class="card-info d-flex justify-content-around">
+                    <li>
+                      <h4 class="card-info-title">Luas</h4>
+                      <span>80m
+                        <sup>2</sup>
+                      </span>
                     </li>
-                    <li class="list-inline-item">
-                      <a href="#" class="link-one">
-                        <i class="fa fa-twitter" aria-hidden="true"></i>
-                      </a>
+                    <li>
+                      <h4 class="card-info-title">Kamar</h4>
+                      <span>2</span>
                     </li>
-                    <li class="list-inline-item">
-                      <a href="#" class="link-one">
-                        <i class="fa fa-instagram" aria-hidden="true"></i>
-                      </a>
+                    <li>
+                      <h4 class="card-info-title">Toilet</h4>
+                      <span>1</span>
                     </li>
-                    <li class="list-inline-item">
-                      <a href="#" class="link-one">
-                        <i class="fa fa-pinterest-p" aria-hidden="true"></i>
-                      </a>
-                    </li>
-                    <li class="list-inline-item">
-                      <a href="#" class="link-one">
-                        <i class="fa fa-dribbble" aria-hidden="true"></i>
-                      </a>
+                    <li>
+                      <h4 class="card-info-title">Parkiran</h4>
+                      <span>-</span>
                     </li>
                   </ul>
                 </div>
@@ -622,19 +562,16 @@
           <nav class="nav-footer">
             <ul class="list-inline">
               <li class="list-inline-item">
-                <a href="#">Home</a>
+                <a href="aboutus.html">About Us</a>
               </li>
               <li class="list-inline-item">
-                <a href="#">About</a>
+                <a href="property-grid.html">Property</a>
               </li>
               <li class="list-inline-item">
-                <a href="#">Property</a>
+                <a href="agents-grid.html">Agents</a>
               </li>
               <li class="list-inline-item">
-                <a href="#">Blog</a>
-              </li>
-              <li class="list-inline-item">
-                <a href="#">Contact</a>
+                <a href="#">Contact Us</a>
               </li>
             </ul>
           </nav>

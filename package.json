@@ -1,0 +1,25 @@
+{
+  "name": "el-hogar",
+  "version": "1.0.0",
+  "description": "Team HdashOne's repository for making El Hogar Website",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nathanaelvictorious/ElHogarProject.git"
+  },
+  "author": "hdashone",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nathanaelvictorious/ElHogarProject/issues"
+  },
+  "homepage": "https://github.com/nathanaelvictorious/ElHogarProject#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}

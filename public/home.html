@@ -1,0 +1,578 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Home</title>
+        <meta content="width=device-width, initial-scale=1.0" name="viewport">
+        <meta content="" name="keywords">
+        <meta content="" name="description">
+        <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" rel="stylesheet">
+        <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+        <link href="lib/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+        <link href="lib/animate/animate.min.css" rel="stylesheet">
+        <link href="lib/ionicons/css/ionicons.min.css" rel="stylesheet">
+        <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+        <link href="css/style.css" rel="stylesheet">
+    </head>
+    <body>
+    <div class="click-closed"></div>
+    <div class="box-collapse">
+    <div class="title-box-d">
+      <h3 class="title-d">Search Property</h3>
+    </div>
+    <span class="close-box-collapse right-boxed ion-ios-close"></span>
+    <div class="box-collapse-wrap form">
+      <form class="form-a">
+        <div class="row">
+          <div class="col-md-12 mb-2">
+            <div class="form-group">
+              <label for="Type">Keyword</label>
+              <input type="text" class="form-control form-control-lg form-control-a" placeholder="Keyword">
+            </div>
+          </div>
+          <div class="col-md-6 mb-2">
+            <div class="form-group">
+              <label for="Type">Type</label>
+              <select class="form-control form-control-lg form-control-a" id="Type">
+                <option>Semua Tipe</option>
+                <option>Di sewakan</option>
+                <option>Di jual</option>
+              </select>
+            </div>
+          </div>
+          <div class="col-md-6 mb-2">
+            <div class="form-group">
+              <label for="city">Kota</label>
+              <select class="form-control form-control-lg form-control-a" id="city">
+                <option>Seluruh Kota</option>
+                <option>Jakarta</option>
+                <option>Tangerang</option>
+                <option>Depok</option>
+                <option>Bogor</option>
+              </select>
+            </div>
+          </div>
+          <div class="col-md-6 mb-2">
+            <div class="form-group">
+              <label for="bedrooms">Kamar Tidur</label>
+              <select class="form-control form-control-lg form-control-a" id="bedrooms">
+                <option>Semua</option>
+                <option>01</option>
+                <option>02</option>
+                <option>03</option>
+              </select>
+            </div>
+          </div>
+          <div class="col-md-6 mb-2">
+            <div class="form-group">
+              <label for="garages">Parkiran</label>
+              <select class="form-control form-control-lg form-control-a" id="garages">
+                <option>Semua</option>
+                <option>01</option>
+                <option>02</option>
+                <option>03</option>
+                <option>04</option>
+              </select>
+            </div>
+          </div>
+          <div class="col-md-6 mb-2">
+            <div class="form-group">
+              <label for="bathrooms">Kamar Mandi</label>
+              <select class="form-control form-control-lg form-control-a" id="bathrooms">
+                <option>Semua</option>
+                <option>01</option>
+                <option>02</option>
+                <option>03</option>
+              </select>
+            </div>
+          </div>
+          <div class="col-md-6 mb-2">
+            <div class="form-group">
+              <label for="price">Harga Minimum</label>
+              <select class="form-control form-control-lg form-control-a" id="price">
+                <option>Semua</option>
+                <option>Dibawah 100 Juta</option>
+                <option>Dibawah 500 Juta</option>
+                <option>Dibawah 1 Miliar</option>
+                <option>Diatas 1 Miliar</option>
+              </select>
+            </div>
+          </div>
+          <div class="col-md-12">
+            <button type="submit" class="btn btn-b">Cari Properti</button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+        <nav class="navbar navbar-default navbar-trans navbar-expand-lg fixed-top">
+            <div class="container">
+              <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarDefault"
+                aria-controls="navbarDefault" aria-expanded="false" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+              </button>
+              <a class="navbar-brand text-brand" href="home.html">El <span class="color-b">Hogar</span></a>
+              <button type="button" class="btn btn-link nav-search navbar-toggle-box-collapse d-md-none" data-toggle="collapse"
+                data-target="#navbarTogglerDemo01" aria-expanded="false">
+                <span class="fa fa-search" aria-hidden="true"></span>
+              </button>
+              <div class="navbar-collapse collapse justify-content-center" id="navbarDefault">
+                <ul class="navbar-nav">
+                  <li class="nav-item">
+                    <a class="nav-link active" href="home.html">Home</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="aboutus">About</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="property">Property</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="agents">Agent</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#footer">Contact Us</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="login.html">Login</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="register.html">Register</a>
+                  </li>
+                </ul>
+              </div>
+              <button type="button" class="btn btn-b-n navbar-toggle-box-collapse d-none d-md-block" data-toggle="collapse"
+                data-target="#navbarTogglerDemo01" aria-expanded="false">
+                <span class="fa fa-search" aria-hidden="true"></span>
+              </button>
+            </div>
+          </nav>
+        <div class="slider">
+            <figure>
+                <div class="slide">
+                    <img src="images/E1.jpg">
+                    <div class="slidetext1">
+                        <p>Mencari rumah sekarang mudah sob! Apalagi untuk kalangan<br>
+                            milenial jaman now yang mau punya rumah. Harga tersedia<br>
+                            dari mulai 100 juta-an! Tunggu apalagi, yuk di cek listing<br>
+                            property milik kami!
+                        </p>
+                        <div class="rounded square">
+                            <p><a href="property-grid.html"><span class="center">Click Here!</span></a></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="slide">
+                    <img src="images/E2.jpg">
+                    <div class="slidetext1">
+                        <p>Saat ini, kebutuhan rumah tinggal sangat lah tinggi.<br>
+                            sekarang ini, apartment adalah solusi terbaik yang ada<br>
+                            dari mulai 500 juta-an! Tunggu apalagi, yuk di cek listing<br>
+                            property milik kami!
+                        </p>
+                        <div class="rounded square">
+                            <p><a href="property-grid.html"><span class="center">Click Here!</span></a></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="slide">
+                    <img src="images/E3.jpg">
+                    <div class="slidetext1">
+                        <p>Lahan adalah komoditas yang masih di incar banyak kalangan<br>
+                            Kami tentu saja menawarkan lahan dengan ragam ukuran di sini!<br>
+                            dari mulai 50 juta-an! Tunggu apalagi, yuk di cek listing<br>
+                            property milik kami!
+                        </p>
+                        <div class="rounded square">
+                            <p><a href="property-grid.html"><span class="center">Click Here!</span></a></p>
+                        </div>
+                    </div>
+                </div>
+            </figure>
+        </div>
+        <div class="Table">
+            <div class="Title">
+                <h2 class="title-a">How We Work</h2>
+            </div>
+            <div class="Heading">
+                <div class="Cell1">
+                    <a href="aboutus.html">
+                    <img src="images/LOGO1.png">
+                    </a>
+                    <p><a href="aboutus.html">SURVEY</a></p>
+                </div>
+                <div class="Cell1">
+                    <a href="aboutus.html">
+                    <img src="images/LOGO4.png">
+                    </a>
+                    <p><a href="aboutus.html">AGREEMENT</a></p>
+                </div>
+                <div class="Cell1">
+                    <a href="aboutus.html">
+                    <img src="images/LOGO2.png">
+                    </a>
+                    <p><a href="aboutus.html">SELLING</a></p>
+                </div>
+            </div>
+            <div class="Row1">
+                <div class="Cell" style="width: 400px;">
+                    <p>Sebagai perusahaan di bidang properti,
+                        kami tentu saja akan memeriksa kondisi
+                        tempat tinggal sesuai SOP (Standart of
+                        Procedure) sesuai kebijakan perusahaan
+                        kami. Yang akan kami cek hanya bagian
+                        luar dan dalam secara sekilas, kemudian
+                        kami dokumentasikan sebagai bukti kondisi
+                        rumah yang akan di jual.
+                    </p>
+                </div>
+                <div class="Cell" style="width: 400px;">
+                    <p>Setelah proses survey, kami akan melakukan
+                        proses perjanjian MOU (Memorandum of Understanding)
+                        yang akan membahas pembagian hasil penjualan
+                        properti dan seberapa lama waktu kontrak
+                        agen properti kami. MOU juga kami gunakan
+                        sebagai landasan hukum apabila pihak
+                        penjual melakukan perubahan sepihak.
+                    </p>
+                </div>
+                <div class="Cell" style="width: 400px;">
+                    <p>Setelah semua proses selesai, kami
+                        akan memasukan data rumah yang akan
+                        di jual ke dalam website kami dan brosur
+                        yang sudah di siapkan dalam kantor
+                        fisik kami. Proses penjualan properti
+                        akan di wakilkan oleh agen perusahaan
+                        dan hasilnya akan langsung di sampaikan
+                        ke pemilik properti sebelumnya.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="Table2">
+            <div class="Title2">
+                <h2 class="title-a">Favourite This Week</h2>
+            </div>
+            <div class="Heading2">
+                <div class="Cell3">
+                    <div class="card-box-a card-shadow">
+                        <div class="img-box-a">
+                          <img src="img/property-10.jpg" alt="" class="img-a img-fluid">
+                        </div>
+                        <div class="card-overlay">
+                          <div class="card-overlay-a-content">
+                            <div class="card-header-a">
+                              <h2 class="card-title-a">
+                                <a href="#">AN House,
+                                  <br /> Jakarta Selatan</a>
+                              </h2>
+                            </div>
+                            <div class="card-body-a">
+                              <div class="price-box d-flex">
+                                <span class="price-a">Jual - Rp 1,5 Miliar</span>
+                              </div>
+                              <a href="property-single.html" class="link-a">Click here to view
+                                <span class="ion-ios-arrow-forward"></span>
+                              </a>
+                            </div>
+                            <div class="card-footer-a">
+                              <ul class="card-info d-flex justify-content-around">
+                                <li>
+                                  <h4 class="card-info-title">Luas</h4>
+                                  <span>210m
+                                    <sup>2</sup>
+                                  </span>
+                                </li>
+                                <li>
+                                  <h4 class="card-info-title">Kamar</h4>
+                                  <span>3</span>
+                                </li>
+                                <li>
+                                  <h4 class="card-info-title">Toilet</h4>
+                                  <span>2</span>
+                                </li>
+                                <li>
+                                  <h4 class="card-info-title">Parkiran</h4>
+                                  <span>1</span>
+                                </li>
+                              </ul>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                </div>
+                <div class="Cell3">
+                    <div class="card-box-a card-shadow">
+                        <div class="img-box-a">
+                          <img src="img/property-8.jpg" alt="" class="img-a img-fluid">
+                        </div>
+                        <div class="card-overlay">
+                          <div class="card-overlay-a-content">
+                            <div class="card-header-a">
+                              <h2 class="card-title-a">
+                                <a href="#">Sunrise Apartment,
+                                  <br /> Tangerang Selatan</a>
+                              </h2>
+                            </div>
+                            <div class="card-body-a">
+                              <div class="price-box d-flex">
+                                <span class="price-a">Jual - Rp 600 Juta</span>
+                              </div>
+                              <a href="property-single.html" class="link-a">Click here to view
+                                <span class="ion-ios-arrow-forward"></span>
+                              </a>
+                            </div>
+                            <div class="card-footer-a">
+                              <ul class="card-info d-flex justify-content-around">
+                                <li>
+                                  <h4 class="card-info-title">Luas</h4>
+                                  <span>40m
+                                    <sup>2</sup>
+                                  </span>
+                                </li>
+                                <li>
+                                  <h4 class="card-info-title">Kamar</h4>
+                                  <span>1</span>
+                                </li>
+                                <li>
+                                  <h4 class="card-info-title">Toilet</h4>
+                                  <span>1</span>
+                                </li>
+                                <li>
+                                  <h4 class="card-info-title">Parkiran</h4>
+                                  <span>-</span>
+                                </li>
+                              </ul>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                </div>
+                <div class="Cell3">
+                    <div class="card-box-a card-shadow">
+                        <div class="img-box-a">
+                          <img src="img/property-9.jpg" alt="" class="img-a img-fluid">
+                        </div>
+                        <div class="card-overlay">
+                          <div class="card-overlay-a-content">
+                            <div class="card-header-a">
+                              <h2 class="card-title-a">
+                                <a href="#">Kavling RK,
+                                  <br /> Denpasar</a>
+                              </h2>
+                            </div>
+                            <div class="card-body-a">
+                              <div class="price-box d-flex">
+                                <span class="price-a">Jual - Rp 1,05 Miliar</span>
+                              </div>
+                              <a href="property-single.html" class="link-a">Click here to view
+                                <span class="ion-ios-arrow-forward"></span>
+                              </a>
+                            </div>
+                            <div class="card-footer-a">
+                              <ul class="card-info d-flex justify-content-around">
+                                <li>
+                                  <h4 class="card-info-title">Luas</h4>
+                                  <span>250m
+                                    <sup>2</sup>
+                                  </span>
+                                </li>
+                                <li>
+                                  <h4 class="card-info-title">Kamar</h4>
+                                  <span>-</span>
+                                </li>
+                                <li>
+                                  <h4 class="card-info-title">Toilet</h4>
+                                  <span>-</span>
+                                </li>
+                                <li>
+                                  <h4 class="card-info-title">Parkiran</h4>
+                                  <span>-</span>
+                                </li>
+                              </ul>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                </div>
+            </div>
+    </body>
+    <section class="section-footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-sm-12 col-md-4">
+              <div class="widget-a">
+                <div class="w-header-a">
+                  <h3 class="w-title-a text-brand">El Hogar</h3>
+                </div>
+                <div class="w-body-a">
+                  <p class="w-text-a color-text-a">
+                    Pergi ke pasar naik taksi, cuman buat beli nasi. Hei kalian saudara saudari,
+                    mari mulai investasi properti!
+                  </p>
+                </div>
+                <div class="w-footer-a" id="footer">
+                  <ul class="list-unstyled">
+                    <li class="color-a">
+                      <span class="color-text-a">E-Mail :</span> elhogar@gmail.com</li>
+                    <li class="color-a">
+                      <span class="color-text-a">Phone :</span> +62 812 8693 9415</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-12 col-md-4 section-md-t3">
+              <div class="widget-a">
+                <div class="w-header-a">
+                  <h3 class="w-title-a text-brand">Mengenai Kami</h3>
+                </div>
+                <div class="w-body-a">
+                  <div class="w-body-a">
+                    <ul class="list-unstyled">
+                      <li class="item-list-a">
+                        <i class="fa fa-angle-right"></i> <a href="#">Site Map</a>
+                      </li>
+                      <li class="item-list-a">
+                        <i class="fa fa-angle-right"></i> <a href="#">Legal</a>
+                      </li>
+                      <li class="item-list-a">
+                        <i class="fa fa-angle-right"></i> <a href="#">Agent Admin</a>
+                      </li>
+                      <li class="item-list-a">
+                        <i class="fa fa-angle-right"></i> <a href="#">Careers</a>
+                      </li>
+                      <li class="item-list-a">
+                        <i class="fa fa-angle-right"></i> <a href="#">Affiliate</a>
+                      </li>
+                      <li class="item-list-a">
+                        <i class="fa fa-angle-right"></i> <a href="#">Privacy Policy</a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-12 col-md-4 section-md-t3">
+              <div class="widget-a">
+                <div class="w-header-a">
+                  <h3 class="w-title-a text-brand">Lokasi Dalam Negri</h3>
+                </div>
+                <div class="w-body-a">
+                  <ul class="list-unstyled">
+                    <li class="item-list-a">
+                      <i class="fa fa-angle-right"></i> <a href="#">Sumatra</a>
+                    </li>
+                    <li class="item-list-a">
+                      <i class="fa fa-angle-right"></i> <a href="#">Kalimantan</a>
+                    </li>
+                    <li class="item-list-a">
+                      <i class="fa fa-angle-right"></i> <a href="#">Jawa</a>
+                    </li>
+                    <li class="item-list-a">
+                      <i class="fa fa-angle-right"></i> <a href="#">Kepulauan Nusa Tenggara</a>
+                    </li>
+                    <li class="item-list-a">
+                      <i class="fa fa-angle-right"></i> <a href="#">Sulawesi</a>
+                    </li>
+                    <li class="item-list-a">
+                      <i class="fa fa-angle-right"></i> <a href="#">Papua</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <footer>
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12">
+              <nav class="nav-footer">
+                <ul class="list-inline">
+                  <li class="list-inline-item">
+                    <a href="home.html">Home</a>
+                  </li>
+                  <li class="list-inline-item">
+                    <a href="aboutus.html">About Us</a>
+                  </li>
+                  <li class="list-inline-item">
+                    <a href="property-grid.html">Property</a>
+                  </li>
+                  <li class="list-inline-item">
+                    <a href="agents-grid.html">Agents</a>
+                  </li>
+                  <li class="list-inline-item">
+                    <a href="#">Contact Us</a>
+                  </li>
+                </ul>
+              </nav>
+              <div class="socials-a">
+                <ul class="list-inline">
+                  <li class="list-inline-item">
+                    <a href="#">
+                      <i class="fa fa-facebook" aria-hidden="true"></i>
+                    </a>
+                  </li>
+                  <li class="list-inline-item">
+                    <a href="#">
+                      <i class="fa fa-twitter" aria-hidden="true"></i>
+                    </a>
+                  </li>
+                  <li class="list-inline-item">
+                    <a href="#">
+                      <i class="fa fa-instagram" aria-hidden="true"></i>
+                    </a>
+                  </li>
+                  <li class="list-inline-item">
+                    <a href="#">
+                      <i class="fa fa-pinterest-p" aria-hidden="true"></i>
+                    </a>
+                  </li>
+                  <li class="list-inline-item">
+                    <a href="#">
+                      <i class="fa fa-dribbble" aria-hidden="true"></i>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
+
+    <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
+    <div id="preloader"></div>
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/8.1.1/firebase-app.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+
+<script>
+  // Your web app's Firebase configuration
+  var firebaseConfig = {
+    apiKey: "AIzaSyDIgY9Qel51pgVl5SxLhmhla-C9CLFREoU",
+    authDomain: "el-hogar-project-22.firebaseapp.com",
+    databaseURL: "https://el-hogar-project-22.firebaseio.com",
+    projectId: "el-hogar-project-22",
+    storageBucket: "el-hogar-project-22.appspot.com",
+    messagingSenderId: "348294361641",
+    appId: "1:348294361641:web:5fd4bf8ff3e69b728f6238"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+</script>
+    <script src="lib/jquery/jquery.min.js"></script>
+    <script src="lib/jquery/jquery-migrate.min.js"></script>
+    <script src="lib/popper/popper.min.js"></script>
+    <script src="lib/bootstrap/js/bootstrap.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="lib/scrollreveal/scrollreveal.min.js"></script>
+    <script src="contactform/contactform.js"></script>
+    <script src="js/main.js"></script>
+
+</html>

@@ -13,8 +13,11 @@ mongoose.connect(url, { useNewUrlParser: true, useUnifiedTopology: true, useFind
   const propertySchema = new mongoose.Schema ({
     name: String,
     price: Number,
+    jenis: String,
     lokasi: String,
+    alamat: String,
     tipe: String,
+    luas: Number,
     kt: Number,
     km: Number,
     carslot: Number,

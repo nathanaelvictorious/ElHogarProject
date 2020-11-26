@@ -12,7 +12,7 @@
   <link href="lib/animate/animate.min.css" rel="stylesheet">
   <link href="lib/ionicons/css/ionicons.min.css" rel="stylesheet">
   <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
-  <link href="css/style.css" rel="stylesheet">
+  <link href="../css/style.css" rel="stylesheet">
 </head>
 
 <body>
@@ -187,21 +187,21 @@
           <div class="col-md-4">
             <div class="card-box-a card-shadow">
               <div class="img-box-a">
-                <img src="img/property-10.jpg" alt="" class="img-a img-fluid">
+                <img src=<%= property.picture%> alt="" class="img-a img-fluid">
               </div>
               <div class="card-overlay">
                 <div class="card-overlay-a-content">
                   <div class="card-header-a">
                     <h2 class="card-title-a">
-                      <a href="#"><% property.name %>,
-                        <br /> <% property.lokasi %></a>
+                      <a href="#"><%= property.toJSON().name %>,
+                        <br /> <%= property.lokasi %></a>
                     </h2>
                   </div>
                   <div class="card-body-a">
                     <div class="price-box d-flex">
-                      <span class="price-a">Jual - Rp 1,5 Miliar</span>
+                      <span class="price-a"><%= property.jenis %> - Rp.<%= property.price %></span>
                     </div>
-                    <a href="property-single.html" class="link-a">Click here to view
+                    <a href="property/<%= property.id %>" class="link-a">Click here to view
                       <span class="ion-ios-arrow-forward"></span>
                     </a>
                   </div>
@@ -209,21 +209,21 @@
                     <ul class="card-info d-flex justify-content-around">
                       <li>
                         <h4 class="card-info-title">Luas</h4>
-                        <span>210m
+                        <span><%= property.luas %>m
                           <sup>2</sup>
                         </span>
                       </li>
                       <li>
                         <h4 class="card-info-title">Kamar</h4>
-                        <span>3</span>
+                        <span><%= property.kt %></span>
                       </li>
                       <li>
                         <h4 class="card-info-title">Toilet</h4>
-                        <span>2</span>
+                        <span><%= property.km %></span>
                       </li>
                       <li>
                         <h4 class="card-info-title">Parkiran</h4>
-                        <span>1</span>
+                        <span><%= property.carslot %></span>
                       </li>
                     </ul>
                   </div>

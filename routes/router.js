@@ -4,7 +4,15 @@ const router = express.Router()
 
 console.log('router connected');
 
-router.get('/property-single', async (req, res) => {
+router.get('/:id', async (req, res) => {
+    const properties = await Property.findById(req.params.id)
+    if (properties== null) res.redirect('/home')
+    res.render('property-single.ejs', { properties: properties})
+})
+
+module.exports = router
+
+/*router.get('/property-single', async (req, res) => {
     const property = new Property({
         name: req.body.name,
         price: req.body.price,
@@ -37,9 +45,9 @@ router.get('/', (req, res) => {
 
 //res.redirect(`/property/${property.id}`)
 
-module.exports = router
 
-/*router.get('/:id', async (req, res) => {
+
+router.get('/:id', async (req, res) => {
     const property = await Property.findById(req.params.id)
     if (property == null) res.redirect('/')
     res.render('property/details', { property: property})

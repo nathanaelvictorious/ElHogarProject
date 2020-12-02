@@ -14,96 +14,94 @@
         <link href="css/style.css" rel="stylesheet">
     </head>
     <body>
-    <div class="click-closed"></div>
-    <div class="box-collapse">
-    <div class="title-box-d">
-      <h3 class="title-d">Search Property</h3>
+      <div class="click-closed"></div>
+      <div class="box-collapse">
+      <div class="title-box-d">
+        <h3 class="title-d">Search Property</h3>
+      </div>
+      <span class="close-box-collapse right-boxed ion-ios-close"></span>
+      <div class="box-collapse-wrap form">
+        <form action="/search" class="form-a" method="GET">
+          <div class="row">
+            <div class="col-md-12 mb-2">
+              <div class="form-group">
+                <label for="Type">Cari sesuai nama</label>
+                <input type="text" name="keyword" class="form-control form-control-lg form-control-a" placeholder="Masukkan kata kunci">
+              </div>
+            </div>
+            <div class="col-md-6 mb-2">
+              <div class="form-group">
+                <label for="Type">Type</label>
+                <select class="form-control form-control-lg form-control-a" id="Type" name="jenis">
+                  <option value="">Semua</option>
+                  <option value="Sewa">Disewa</option>
+                  <option value="Jual">Dijual</option>
+                </select>
+              </div>
+            </div>
+            <div class="col-md-6 mb-2">
+              <div class="form-group">
+                <label for="city">Kota</label>
+                <select class="form-control form-control-lg form-control-a" id="city" name="lokasi">
+                  <option value="">Semua</option>
+                  <% location.forEach(lokasi => { %>
+                    <option value="<%=lokasi %>"><%= lokasi %></option>
+                  <% }) %>
+                  
+                </select>
+              </div>
+            </div>
+            <div class="col-md-6 mb-2">
+              <div class="form-group">
+                <label for="bedrooms">Kamar Tidur</label>
+                <select class="form-control form-control-lg form-control-a" id="bedrooms" name="kt">
+                  <option value="">Semua</option>
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                </select>
+              </div>
+            </div>
+            <div class="col-md-6 mb-2">
+              <div class="form-group">
+                <label for="garages">Parkiran</label>
+                <select class="form-control form-control-lg form-control-a" id="garages" name="carslot">
+                  <option value="">Semua</option>
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                </select>
+              </div>
+            </div>
+            <div class="col-md-6 mb-2">
+              <div class="form-group">
+                <label for="bathrooms">Kamar Mandi</label>
+                <select class="form-control form-control-lg form-control-a" id="bathrooms" name="km">
+                  <option value="">Semua</option>
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                </select>
+              </div>
+            </div>
+            <div class="col-md-6 mb-2">
+              <div class="form-group">
+                <label for="price">Harga</label>
+                <select class="form-control form-control-lg form-control-a" id="price" name="price">
+                  <option value="">Semua</option>
+                  <option value="500000000"> < 500 Juta</option>
+                  <option value="1000000000"> < 1 Miliar</option>
+                  <option value="2000000000"> < 2 Miliar</option>
+                </select>
+              </div>
+            </div>
+            <div class="col-md-12">
+              <button type="submit" class="btn btn-b" type="submit">Submit</button>
+            </div>
+          </div>
+        </form>
+      </div>
     </div>
-    <span class="close-box-collapse right-boxed ion-ios-close"></span>
-    <div class="box-collapse-wrap form">
-      <form class="form-a">
-        <div class="row">
-          <div class="col-md-12 mb-2">
-            <div class="form-group">
-              <label for="Type">Keyword</label>
-              <input type="text" class="form-control form-control-lg form-control-a" placeholder="Keyword">
-            </div>
-          </div>
-          <div class="col-md-6 mb-2">
-            <div class="form-group">
-              <label for="Type">Type</label>
-              <select class="form-control form-control-lg form-control-a" id="Type">
-                <option>Semua Tipe</option>
-                <option>Di sewakan</option>
-                <option>Di jual</option>
-              </select>
-            </div>
-          </div>
-          <div class="col-md-6 mb-2">
-            <div class="form-group">
-              <label for="city">Kota</label>
-              <select class="form-control form-control-lg form-control-a" id="city">
-                <option>Seluruh Kota</option>
-                <option>Jakarta</option>
-                <option>Tangerang</option>
-                <option>Depok</option>
-                <option>Bogor</option>
-              </select>
-            </div>
-          </div>
-          <div class="col-md-6 mb-2">
-            <div class="form-group">
-              <label for="bedrooms">Kamar Tidur</label>
-              <select class="form-control form-control-lg form-control-a" id="bedrooms">
-                <option>Semua</option>
-                <option>01</option>
-                <option>02</option>
-                <option>03</option>
-              </select>
-            </div>
-          </div>
-          <div class="col-md-6 mb-2">
-            <div class="form-group">
-              <label for="garages">Parkiran</label>
-              <select class="form-control form-control-lg form-control-a" id="garages">
-                <option>Semua</option>
-                <option>01</option>
-                <option>02</option>
-                <option>03</option>
-                <option>04</option>
-              </select>
-            </div>
-          </div>
-          <div class="col-md-6 mb-2">
-            <div class="form-group">
-              <label for="bathrooms">Kamar Mandi</label>
-              <select class="form-control form-control-lg form-control-a" id="bathrooms">
-                <option>Semua</option>
-                <option>01</option>
-                <option>02</option>
-                <option>03</option>
-              </select>
-            </div>
-          </div>
-          <div class="col-md-6 mb-2">
-            <div class="form-group">
-              <label for="price">Harga Minimum</label>
-              <select class="form-control form-control-lg form-control-a" id="price">
-                <option>Semua</option>
-                <option>Dibawah 100 Juta</option>
-                <option>Dibawah 500 Juta</option>
-                <option>Dibawah 1 Miliar</option>
-                <option>Diatas 1 Miliar</option>
-              </select>
-            </div>
-          </div>
-          <div class="col-md-12">
-            <button type="submit" class="btn btn-b">Cari Properti</button>
-          </div>
-        </div>
-      </form>
-    </div>
-  </div>
         <nav class="navbar navbar-default navbar-trans navbar-expand-lg fixed-top">
             <div class="container">
               <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarDefault"

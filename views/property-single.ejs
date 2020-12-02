@@ -23,12 +23,12 @@
     </div>
     <span class="close-box-collapse right-boxed ion-ios-close"></span>
     <div class="box-collapse-wrap form">
-      <form class="form-a">
+      <form action="/search" class="form-a" method="GET">
         <div class="row">
           <div class="col-md-12 mb-2">
             <div class="form-group">
-              <label for="Type">Keyword</label>
-              <input type="text" class="form-control form-control-lg form-control-a" placeholder="Keyword">
+              <label for="Type">Cari sesuai nama</label>
+              <input type="text" name="keyword" class="form-control form-control-lg form-control-a" placeholder="Masukkan properti yang ingin dicari">
             </div>
           </div>
           <div class="col-md-6 mb-2">
@@ -100,7 +100,7 @@
             </div>
           </div>
           <div class="col-md-12">
-            <button type="submit" class="btn btn-b">Cari Properti</button>
+            <input type="submit" class="btn btn-b" value="Submit">
           </div>
         </div>
       </form>
@@ -174,7 +174,7 @@
     </div>
   </section>
   <figure>
-    <div class="sliders align-self-center">
+    <div class="sliders align-self-center ">
         <img src="<%= properties.picture %>">
     </div>
 </figure>

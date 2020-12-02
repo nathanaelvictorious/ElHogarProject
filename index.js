@@ -6,7 +6,6 @@ const app = express();
 const PORT = 3000;
 
 const Property = require('./models/property.js');
-const propertiesAll = Property.find()
 
 app.use(express.static(path.join(__dirname, '/public')));
 app.set('view engine', 'ejs');
@@ -14,7 +13,9 @@ app.set('views', (__dirname, './views'));
 
 
 app.get('/home', async (req, res) => {
-    res.render('home.ejs')
+    const location = await Property.find().distinct('lokasi')
+    console.log(location)
+    res.render('home.ejs', {location: location})
 })
 
 app.get('/aboutus', (req, res) => {
@@ -30,30 +31,50 @@ app.get('/agents', (req, res) => {
     res.sendFile(`${__dirname}/public/agents-grid.html`)
 })
 
+//Get buat hasil search
+app.get('/search', async (req, res) => {
+    console.log('Search Success')
+    
+    try {
+        const Keyword = req.query.keyword
+        const Jenis = req.query.jenis
+        const Lokasi = req.query.lokasi
+        const Kt = req.query.kt
+        const Km = req.query.km
+        const Carslot = req.query.carslot
+        const Price = req.query.price
+        /*const Kt = parseInt(req.query.kt)
+        const Km = parseInt(req.query.km)
+        const Carslot = parseInt(req.query.carslot)
+        const Price = parseInt(req.query.price)*/
+
+        const properties = await Property.find({
+            $or: [
+                {$or: [{name: {$regex: Keyword, $options: 'i'}}, {desc: {$regex: Keyword, $options: 'i'}}]},
+                {jenis: {$eq: Jenis},
+                 lokasi: {$eq: Lokasi},
+                 kt: {$eq: Kt},
+                 km: {$eq: Km},
+                 carslot: {$eq: Carslot},
+                 price: {$gt: 0, $lte: Price}}
+            ]
+        }) 
+        console.log(properties)
+        res.render('property-grid.ejs', {properties: properties})
+    } catch (err) {
+    console.error(err);
+    }
+})
+
+//Get property single buat id
 app.get('/:id', async (req, res) => {
-    console.log('Hello kontl');
-    const properties = await Property.findById(req.params.id);
+    console.log('Success');
+
+    const properties = await Property.findById(req.params.id)
     if (properties== null) res.redirect('/home');
 
     res.render('property-single.ejs', { properties: properties});
 })
-
-/*app.post('/search', (req, res) => {
-    let propertyQuery = new RegExp("^" + req.body.query)
-    Property.find({name: {$regex: propertyQuery}})
-
-    .then(property => {
-        res.json(property)
-    })
-
-    .catch(err => {
-        console.log(err)
-    })
-}) */
-
-//app.use('/property', propertyRouter);
-
-
 
 app.listen(PORT, () => {
     console.log(`Server running on port ${PORT}`)

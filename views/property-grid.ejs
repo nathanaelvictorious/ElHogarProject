@@ -183,6 +183,7 @@
             </form>
           </div>
         </div>
+        <% if (properties.length > 0) {%> 
         <% properties.forEach(property => {  %>
           <div class="col-md-4">
             <div class="card-box-a card-shadow">
@@ -232,6 +233,9 @@
             </div>
           </div>
         <% }) %>
+      <% } else { %>
+        <h1>Cannot find anything</h1>
+      <% } %>
         
       </div>
     </div>

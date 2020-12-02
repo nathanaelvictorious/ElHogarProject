@@ -27,6 +27,8 @@
     "express": "^4.17.1",
     "firebase": "^8.1.1",
     "mongoose": "^5.10.15",
-    "path": "^0.12.7"
+    "mongoose-slug-generator": "^1.0.4",
+    "path": "^0.12.7",
+    "slugify": "^1.4.6"
   }
 }

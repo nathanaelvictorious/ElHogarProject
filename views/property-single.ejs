@@ -115,7 +115,7 @@
                 <span></span>
                 <span></span>
               </button>
-              <a class="navbar-brand text-brand" href="home.html">El <span class="color-b">Hogar</span></a>
+              <a class="navbar-brand text-brand" href="home">El <span class="color-b">Hogar</span></a>
               <button type="button" class="btn btn-link nav-search navbar-toggle-box-collapse d-md-none" data-toggle="collapse"
                 data-target="#navbarTogglerDemo01" aria-expanded="false">
                 <span class="fa fa-search" aria-hidden="true"></span>
@@ -123,19 +123,19 @@
               <div class="navbar-collapse collapse justify-content-center" id="navbarDefault">
                 <ul class="navbar-nav">
                   <li class="nav-item">
-                    <a class="nav-link active" href="home.html">Home</a>
+                    <a class="nav-link active" href="home">Home</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="aboutus.html">About</a>
+                    <a class="nav-link" href="aboutus">About</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="property-grid.html">Property</a>
+                    <a class="nav-link" href="property">Property</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="agents-grid.html">Agent</a>
+                    <a class="nav-link" href="agents">Agent</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="#">Contact Us</a>
+                    <a class="nav-link" href="#footer">Contact Us</a>
                   </li>
                 </ul>
               </div>
@@ -159,13 +159,13 @@
           <nav aria-label="breadcrumb" class="breadcrumb-box d-flex justify-content-lg-end">
             <ol class="breadcrumb">
               <li class="breadcrumb-item">
-                <a href="home.html">Home</a>
+                <a href="home">Home</a>
               </li>
               <li class="breadcrumb-item">
-                <a href="property-grid.html">Property</a>
+                <a href="property">Property</a>
               </li>
               <li class="breadcrumb-item active" aria-current="page">
-                AN House
+                <%= properties.name %>
               </li>
             </ol>
           </nav>
@@ -174,8 +174,8 @@
     </div>
   </section>
   <figure>
-    <div class="sliders">
-        <img src="images/E4.jpg">
+    <div class="sliders align-self-center">
+        <img src="<%= properties.picture %>">
     </div>
 </figure>
   <section class="property-single nav-arrow-b">
@@ -188,10 +188,10 @@
               <div class="property-price d-flex justify-content-center foo">
                 <div class="card-header-c d-flex">
                   <div class="card-box-ico">
-                    <span class="ion-money">Rp</span>
+                    <span class="ion-money">Rp. </span>
                   </div>
                   <div class="card-title-c align-self-center">
-                    <h5 class="title-c">1,5 Miliar</h5>
+                    <h5 class="title-c"><%= properties.price %></h5>
                   </div>
                 </div>
               </div>
@@ -206,38 +206,30 @@
                 <div class="summary-list">
                   <ul class="list">
                     <li class="d-flex justify-content-between">
-                      <strong>ID Properti:</strong>
-                      <span>0001</span>
-                    </li>
-                    <li class="d-flex justify-content-between">
                       <strong>Lokasi:</strong>
-                      <span>Jakarta Selatan</span>
+                      <span><%= properties.lokasi %></span>
                     </li>
                     <li class="d-flex justify-content-between">
                       <strong>Tipe Properti:</strong>
-                      <span>House</span>
-                    </li>
-                    <li class="d-flex justify-content-between">
-                      <strong>Status:</strong>
-                      <span>Belum Terjual</span>
+                      <span><%= properties.tipe %></span>
                     </li>
                     <li class="d-flex justify-content-between">
                       <strong>Area:</strong>
-                      <span>210m
+                      <span><%= properties.luas %>m
                         <sup>2</sup>
                       </span>
                     </li>
                     <li class="d-flex justify-content-between">
-                      <strong>Kamar:</strong>
-                      <span>3</span>
+                      <strong>Kamar Tidur:</strong>
+                      <span><%= properties.kt %></span>
                     </li>
                     <li class="d-flex justify-content-between">
-                      <strong>Toilet:</strong>
-                      <span>2</span>
+                      <strong>Kamar Mandi:</strong>
+                      <span><%= properties.km %></span>
                     </li>
                     <li class="d-flex justify-content-between">
                       <strong>Parkiran:</strong>
-                      <span>1</span>
+                      <span><%= properties.carslot %></span>
                     </li>
                   </ul>
                 </div>
@@ -253,15 +245,7 @@
               </div>
               <div class="property-description">
                 <p class="description color-text-a">
-                  Rumah terbaik pada kelas nya! Harga termasuk masih sangat murah di lokasinya!
-                  Awal di bangun tahun 2000 dan sudah mengalami 2 kali renovasi. Pemilik Rumah
-                  menjual karena ingin pindah ke daerah pinggir kota. Jadi tunggu apalagi!
-                  Bila ada rejeki lebih, mari beli rumah ini!
-                </p>
-                <p class="description color-text-a no-margin">
-                  Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Donec rutrum congue leo eget
-                  malesuada. Quisque velit nisi,
-                  pretium ut lacinia in, elementum id enim. Donec sollicitudin molestie malesuada.
+                  <%= properties.desc %>
                 </p>
               </div>
               <div class="row section-t3">
@@ -412,7 +396,7 @@
       </div>
     </div>
   </section>
-  <section class="section-footer">
+  <section class="section-footer" id="footer">
     <div class="container">
       <div class="row">
         <div class="col-sm-12 col-md-4">

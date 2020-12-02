@@ -5,9 +5,10 @@ const router = express.Router()
 console.log('router connected');
 
 router.get('/:id', async (req, res) => {
-    const properties = await Property.findById(req.params.id)
-    if (properties== null) res.redirect('/home')
-    res.render('property-single.ejs', { properties: properties})
+    console.log('Hello kontl');
+    const properties = await Property.findById(req.params.id);
+    if (properties== null) res.redirect('/home');
+    res.render('property-single.ejs', { properties: properties});
 })
 
 module.exports = router

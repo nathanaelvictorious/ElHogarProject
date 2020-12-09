@@ -23,6 +23,7 @@ app.get('/aboutus', (req, res) => {
 })
 
 app.get('/property', async (req, res) => {
+    const location = await Property.find().distinct('lokasi')
     const properties = await Property.find()
     res.render('property-grid.ejs', {properties: properties})
 });
@@ -73,7 +74,9 @@ app.get('/:id', async (req, res) => {
     const properties = await Property.findById(req.params.id)
     if (properties== null) res.redirect('/home');
 
-    res.render('property-single.ejs', { properties: properties});
+    res.render('property-single.ejs', { 
+        properties: properties
+    })
 })
 
 app.listen(PORT, () => {

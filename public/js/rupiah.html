@@ -1,0 +1,38 @@
+<html>
+<head>
+	<title>Membuat Format Rupiah Dengan Javascript</title>
+</head>
+<body>
+ 
+	<div class="kotak">
+		<!-- <p>Ketik jumlah nominal pada form di bawah ini.</p>
+		<span>Nominal Rupiah. :</span> -->
+		<h1 id="harga">121231231231231<h1>
+	</div>
+ 
+
+</body>
+</html>
+
+<script>
+
+		var bilangan = document.getElementById("harga").innerHTML;
+		// document.write(bilangan);
+		// var bilangan = 123123123;
+			
+			var	number_string = bilangan.toString(),
+				sisa 	= number_string.length % 3,
+				rupiah 	= number_string.substr(0, sisa),
+				ribuan 	= number_string.substr(sisa).match(/\d{3}/g);
+					
+			if (ribuan) {
+				separator = sisa ? '.' : '';
+				rupiah += separator + ribuan.join('.');
+			}
+			
+		// Cetak hasil
+		bilangan.innerHTML = document.write(rupiah); // Hasil: 23.456.789
+
+
+
+	</script>

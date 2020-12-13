@@ -13,8 +13,8 @@ app.set('views', (__dirname, './views'));
 
 
 app.get('/', async (req, res) => {
-    const location = await Property.find().distinct('lokasi')
-    console.log(location)
+    /*const location = await Property.find().distinct('lokasi')
+    console.log(location)*/
     res.render('home.ejs', {location: location})
 })
 

@@ -3,7 +3,7 @@ const path = require('path');
 //const propertyRouter = require('./routes/router.js');
 const mongoose = require('mongoose');
 const app = express();
-const PORT = 3000;
+const PORT = process.env.PORT || 3000;
 
 const Property = require('./models/property.js');
 
@@ -80,5 +80,5 @@ app.get('/property/:id', async (req, res) => {
 })
 
 app.listen(PORT, () => {
-    console.log(`Server running on port ${PORT}`)
+    console.log(`Listening on port ${PORT}`)
 })

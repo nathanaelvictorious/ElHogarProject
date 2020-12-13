@@ -12,7 +12,7 @@ app.set('view engine', 'ejs');
 app.set('views', (__dirname, './views'));
 
 
-app.get('/home', async (req, res) => {
+app.get('/', async (req, res) => {
     const location = await Property.find().distinct('lokasi')
     console.log(location)
     res.render('home.ejs', {location: location})
@@ -68,7 +68,7 @@ app.get('/search', async (req, res) => {
 })
 
 //Get property single buat id
-app.get('/:id', async (req, res) => {
+app.post('/:id', async (req, res) => {
     console.log('Success');
 
     const properties = await Property.findById(req.params.id)

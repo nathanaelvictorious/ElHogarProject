@@ -1,0 +1,114 @@
+<div class="form-group">
+    <label for="nama">Nama</label>
+    <input required value="<%= properti.nama %>" type="text" name="nama" id="nama" class="form-control">
+</div>
+
+
+<div class="form-group">
+    <label for="harga">Harga</label>
+    <input required value="<%= properti.harga %>" type="number" name="harga" id="harga" class="form-control currency">
+</div>
+
+<div class="input-group mb-3">
+    <div class="input-group-prepend">
+      <label class="input-group-text" for="jenis">Jenis</label>
+    </div>
+    <select required value="<%= properti.jenis %>" name="jenis" id="jenis" class="custom-select" >
+      <option selected>Pilih...</option>
+      <option value="Jual">Jual</option>
+      <option value="Sewa">Sewa</option>
+    </select>
+</div>
+
+<div class="form-group">
+    <label for="lokasi">Lokasi</label>
+    <input required value="<%= properti.lokasi %>" type="text" name="lokasi" id="lokasi" class="form-control">
+</div>
+
+
+<div class="form-group">
+    <label for="alamat">Alamat</label>
+    <input required value="<%= properti.alamat %>" type="text" name="alamat" id="alamat" class="form-control">
+</div>
+
+
+<div class="input-group mb-3">
+    <div class="input-group-prepend">
+      <label class="input-group-text" for="tipe">Tipe</label>
+    </div>
+    <select required value="<%= properti.tipe %>" name="tipe" id="tipe" class="custom-select" >
+      <option selected>Pilih...</option>
+      <option value="House">House</option>
+      <option value="Apartment">Apartment</option>
+      <option value="Kavling">Kavling</option>
+    </select>
+</div>
+
+
+<div class="form-group">
+    <label for="luas">Luas</label>
+    <input required value="<%= properti.luas %>" type="number" name="luas" id="luas" class="form-control">
+</div>
+
+
+<div class="form-group mb-3">
+    <!-- <div class="input-group-prepend"> input-group-text-->
+      <label class=" pr-3" for="kt">Kamar Tidur</label>
+    <!-- </div> -->
+    <select required value="<%= properti.kt %>" name="kt" id="kt" class="form-control" >
+        <option selected>Pilih...</option>
+        <option value="0">0</option>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+    </select>
+</div>
+
+
+<div class="input-group mb-3">
+    <div class="input-group-prepend">
+      <label class="input-group-text pr-2" for="km">Kamar Mandi</label>
+    </div>
+    <select required value="<%= properti.km %>" name="km" id="km" class="custom-select" >
+        <option selected>Pilih...</option>
+        <option value="0">0</option>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+    </select>
+</div>
+
+
+<div class="input-group mb-3">
+    <div class="input-group-prepend">
+      <label class="input-group-text pr-5" for="cs">Car Slot</label>
+    </div>
+    <select required value="<%= properti.cs %>" name="cs" id="cs" class="custom-select" >
+        <option selected>Pilih...</option>
+        <option value="0">0</option>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+    </select>
+</div>
+
+
+<!-- <div class="form-group">
+    <label for="deskripsi">Deskripsi</label>
+    <textarea name="deskripsi" id="deskripsi" class="form-control"><%= properti.deskripsi %></textarea>
+</div> -->
+
+
+<div class="form-group">
+    <label for="deskripsi">Deskripsi</label>
+    <textarea required name="deskripsi" id="deskripsi" class="form-control"><%= properti.deskripsi %></textarea>
+</div>
+
+
+
+<a href="/admin" class="btn btn-secondary">Cancel</a>
+<button type="submit" class="btn btn-primary">Save</button>

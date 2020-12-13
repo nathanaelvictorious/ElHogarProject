@@ -68,7 +68,7 @@ app.get('/search', async (req, res) => {
 })
 
 //Get property single buat id
-app.post('/:id', async (req, res) => {
+app.get('/property/:id', async (req, res) => {
     console.log('Success');
 
     const properties = await Property.findById(req.params.id)

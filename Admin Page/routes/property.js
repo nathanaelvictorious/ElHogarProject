@@ -2,13 +2,15 @@ const express = require('express')
 const Properti = require('../models/properti')
 const router = express.Router()
 
-const { ensureAuthenticated } = require("../config/auth");
+const {ensureAuthenticated} = require("../config/auth");
+
+router.use(ensureAuthenticated)
 
 router.get('/new', ensureAuthenticated, (req,res) => {
     res.render('property/new', { name: req.user.name, properti: new Properti()})
 })
 
-router.get('/edit/:id', ensureAuthenticated, async (req,res) => {
+router.get('/edit/:id', (ensureAuthenticated), async (req,res) => {
     const properti = await Properti.findById(req.params.id)
     res.render('property/edit', { name: req.user.name, properti: properti})
 })

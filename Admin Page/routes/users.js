@@ -5,12 +5,18 @@ const bcrypt = require("bcryptjs");
 
 const passport = require("passport");
 
+const { ensureAuthenticated } = require("../config/auth");
+
 //user model
 const User = require("../models/User");
 
-router.get("/login", (req, res) => res.render("login"));
+router.get("/login", (req, res) => {
+  res.render("login")
+});
 
-router.get("/register", (req, res) => res.render("register"));
+router.get("/register", ensureAuthenticated, (req, res) => {
+  res.render("register", { name: req.user.name })
+});
 
 //register post
 

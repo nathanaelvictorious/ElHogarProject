@@ -36,6 +36,10 @@ app.set("view engine", "ejs");
 //bodyparser
 app.use(express.urlencoded({ extended: false }));
 
+// static files
+app.use(express.static('public'))
+app.use('/css', express.static(__dirname + 'public/css'))
+
 // express session middleware
 
 app.use(

@@ -3,7 +3,7 @@ const path = require('path');
 //const propertyRouter = require('./routes/router.js');
 const mongoose = require('mongoose');
 const app = express();
-const PORT = 3000;
+const PORT = process.env.PORT || 3000;
 
 const Property = require('./models/property.js');
 
@@ -12,9 +12,9 @@ app.set('view engine', 'ejs');
 app.set('views', (__dirname, './views'));
 
 
-app.get('/home', async (req, res) => {
-    const location = await Property.find().distinct('lokasi')
-    console.log(location)
+app.get('/', async (req, res) => {
+    /*const location = await Property.find().distinct('lokasi')
+    console.log(location)*/
     res.render('home.ejs', {location: location})
 })
 
@@ -68,7 +68,7 @@ app.get('/search', async (req, res) => {
 })
 
 //Get property single buat id
-app.get('/:id', async (req, res) => {
+app.get('/property/:id', async (req, res) => {
     console.log('Success');
 
     const properties = await Property.findById(req.params.id)
@@ -80,5 +80,5 @@ app.get('/:id', async (req, res) => {
 })
 
 app.listen(PORT, () => {
-    console.log(`Server running on port ${PORT}`)
+    console.log(`Listening on port ${PORT}`)
 })

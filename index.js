@@ -33,14 +33,14 @@ const db = require("./config/keys").MongoURI;
 //connect mongodb
 mongoose
   .connect(db, { useNewUrlParser: true, useUnifiedTopology: true, useCreateIndex: true })
-  .then(() =>)
   .catch((err) => console.log(err));
 
 
 app.get('/', async (req, res) => {
-    const location = await Property.find().distinct('lokasi')
+    const location = await Properti.find().distinct('lokasi')
+    const properties = await Properti.find()
     console.log(location)
-    res.render('home.ejs', {location: location})
+    res.render('home.ejs', {location: location, properties: properties})
 })
 
 app.get('/aboutus', (req, res) => {
@@ -69,7 +69,7 @@ app.get('/search', async (req, res) => {
         const Carslot = req.query.carslot
         const Price = req.query.price
 
-        const properties = await Property.find({
+        const properties = await Properti.find({
             $or: [
                 {$or: [{nama: {$regex: Keyword, $options: 'i'}}, {desc: {$regex: Keyword, $options: 'i'}}]},
                 {jenis: {$eq: Jenis},

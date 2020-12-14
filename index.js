@@ -41,8 +41,6 @@ mongoose
   .catch((err) => console.log(err));
 
 
-
-
 app.get('/', async (req, res) => {
     const location = await Property.find().distinct('lokasi')
     console.log(location)

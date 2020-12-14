@@ -86,7 +86,7 @@ app.get('/search', async (req, res) => {
     }
 })
 
-app.get('/property/:id', async (req, res) => {
+app.get('/properties/:id', async (req, res) => {
     const properties = await Properti.find()
     res.render('property-grid.ejs', {properties: properties})
 });

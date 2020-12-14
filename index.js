@@ -39,15 +39,7 @@ mongoose
   .then(() => console.log("mongoDB Terkoneksi..."))
   .catch((err) => console.log(err));
 
-app.use(expressLayouts);
 
-
-//bodyparser
-app.use(express.urlencoded({ extended: false }));
-
-
-// static files
-app.use(express.static('public'))
 
 
 app.get('/', async (req, res) => {
@@ -121,6 +113,16 @@ app.get('/search', async (req, res) => {
 
 
 app.use('/css', express.static(__dirname + 'public/css'))
+
+app.use(expressLayouts);
+
+
+//bodyparser
+app.use(express.urlencoded({ extended: false }));
+
+
+// static files
+app.use(express.static('public'))
 
 // express session middleware
 

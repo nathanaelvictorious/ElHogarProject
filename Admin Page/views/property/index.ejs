@@ -16,7 +16,7 @@
       <%- include ("../partials/nav"); %>
    
       
-      <div class="container mt-5 mb-5">
+      <div class="container mt-4 mb-5">
         <h1 class="mb-4">Property</h1>
         <a href="/property/new" class="btn btn-success">New Property</a>
 
@@ -73,16 +73,15 @@
                 <%= properti.cs %>
               </div>
 
-              <div class="card-text mb-2">
-                <b>Deskripsi: </b>
-                <%= properti.deskripsi %>
-              </div>
+              
 
-              <a href="property/<%= properti.slug %>" class="btn btn-primary">Read More</a>
-              <a href="property/edit/<%= properti.id %>" class="btn btn-info">Edit</a>
-              <form action="/property/<%= properti.id %>?_method=DELETE" method="POST" class="d-inline">
-                <button type="submit" class="btn btn-danger">Delete</button>
-              </form>
+              <div class="mt-4">
+                <a href="property/<%= properti.slug %>" class="btn btn-primary mr-1   ">Deskripsi</a>
+                <a href="property/edit/<%= properti.id %>" class="btn btn-info mr-1">Edit</a>
+                <form action="/property/<%= properti.id %>?_method=DELETE" method="POST" class="d-inline">
+                  <button type="submit" class="btn btn-danger">Delete</button>
+                </form>
+              </div>
             </div>
           </div>
         <% }) %> 

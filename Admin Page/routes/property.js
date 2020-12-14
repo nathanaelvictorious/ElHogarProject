@@ -33,8 +33,9 @@ router.put('/:id', async (req, res, next) => {
 
 router.delete('/:id', async (req, res) => {
     await Properti.findByIdAndDelete(req.params.id)
-    res.redirect('/')
+    res.redirect('/admin')
 })
+
 
 function savePropertiAndRedirect(path) {
     return async (req, res) => {
@@ -49,7 +50,6 @@ function savePropertiAndRedirect(path) {
       properti.kt = req.body.kt
       properti.km = req.body.km
       properti.cs = req.body.cs
-      // properti.deskripsi = req.body.deskripsi
       properti.deskripsi = req.body.deskripsi
       try {
         properti = await properti.save()

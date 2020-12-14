@@ -53,6 +53,10 @@ const propertiSchema = new mongoose.Schema({
         type: String,
         required: true
     },
+    image: {
+        type: String,
+        required: true
+    },
     slug: {
         type: String,
         required: true,
@@ -75,6 +79,12 @@ propertiSchema.pre('validate', function(next) {
     }
 
     next()
+})
+
+propertiSchema.virtual('coverImagePath').get(function (){
+    if(this.img != null && this.imgType != null){
+        return `data:${this.imgType};charset=utf-8;base64,${this.img.toString('base64')}`;
+    }
 })
 
 module.exports = mongoose.model('Properti', propertiSchema)

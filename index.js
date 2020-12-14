@@ -38,9 +38,8 @@ mongoose
 
 app.get('/', async (req, res) => {
     const location = await Properti.find().distinct('lokasi')
-    const properties = await Properti.find()
     console.log(location)
-    res.render('home.ejs', {location: location, properties: properties})
+    res.render('home.ejs', {location: location})
 })
 
 app.get('/aboutus', (req, res) => {

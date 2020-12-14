@@ -87,9 +87,15 @@ app.get('/search', async (req, res) => {
 })
 
 app.get('/properties/:id', async (req, res) => {
-    const properties = await Properti.find()
-    res.render('property-single.ejs', {properties: properties})
-});
+    console.log('Success');
+
+    const properties = await Properti.findById(req.params.id)
+    if (properties== null) res.redirect('/home');
+
+    res.render('property-single.ejs', { 
+        properties: properties
+    })
+})
 
 app.use('/css', express.static(__dirname + 'public/css'))
 

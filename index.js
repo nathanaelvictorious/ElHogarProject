@@ -20,6 +20,7 @@ const session = require("express-session");
 const passport = require("passport");
 
 const Property = require('./models/property.js');
+const Properti = require('./models/properti.js')
 
 app.use(express.static(path.join(__dirname, '/public')));
 app.set('view engine', 'ejs');
@@ -53,7 +54,7 @@ app.get('/aboutus', (req, res) => {
 })
 
 app.get('/property', async (req, res) => {
-    const properties = await Property.find()
+    const properties = await Properti.find()
     res.render('property-grid.ejs', {properties: properties})
 });
 
@@ -102,7 +103,7 @@ app.get('/search', async (req, res) => {
 app.get('/properties/:id', async (req, res) => {
     console.log('Success');
 
- const properties = await Property.findById(req.params.id)
+ const properties = await Properti.findById(req.params.id)
     if (properties== null) res.redirect('/home');
 
      res.render('property-single.ejs', { 

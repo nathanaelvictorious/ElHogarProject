@@ -88,7 +88,7 @@ app.get('/search', async (req, res) => {
 
 app.get('/properties/:id', async (req, res) => {
     const properties = await Properti.find()
-    res.render('property-grid.ejs', {properties: properties})
+    res.render('property-single.ejs', {properties: properties})
 });
 
 app.use('/css', express.static(__dirname + 'public/css'))

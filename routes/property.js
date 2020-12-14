@@ -46,10 +46,11 @@ function savePropertiAndRedirect(path) {
       properti.kt = req.body.kt
       properti.km = req.body.km
       properti.cs = req.body.cs
+      properti.picture = req.body.picture
       properti.deskripsi = req.body.deskripsi
+      
       try {        
         properti = await properti.save()
-        console.log('Already')
         res.redirect(`/property/${properti.slug}`)
       } catch (e) {
         res.render(`property/${path}`, { properti: properti })

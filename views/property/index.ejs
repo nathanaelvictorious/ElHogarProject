@@ -1,0 +1,73 @@
+      <%- include ("../partials/nav"); %>
+   
+      
+      <div class="container mt-4 mb-5">
+        <h1 class="mb-4">Property</h1>
+        <a href="property/new" class="btn btn-success">New Property</a>
+
+        <% property.forEach(properti => { %>
+          <div class="card mt-4">
+            <div class="card-body">
+              
+              <h4 class="card-title">
+                <%= properti.nama %>
+              </h4>
+
+              <div class="card-text mb-2">
+                <b>Harga :</b>
+                <%= properti.harga %>
+              </div>
+
+              <div class="card-text mb-2">
+                <b>Jenis :</b>
+                <%= properti.jenis %>
+              </div>
+
+              <div class="card-text mb-2">
+                <b>Lokasi :</b>
+                <%= properti.lokasi %>
+              </div>
+
+              <div class="card-text mb-2">
+                <b>Alamat :</b>
+                <%= properti.alamat %>
+              </div>
+
+              <div class="card-text mb-2">
+                <b>Tipe :</b>
+                <%= properti.tipe %>
+              </div>
+
+              <div class="card-text mb-2">
+                <b>Luas :</b>
+                <%= properti.luas %>
+              </div>
+
+              <div class="card-text mb-2">
+                <b>Kamar Tidur :</b>
+                <%= properti.kt %>
+              </div>
+
+              <div class="card-text mb-2">
+                <b>Kamar Mandi :</b>
+                <%= properti.km %>
+              </div>
+
+              <div class="card-text mb-2">
+                <b>Car Slot :</b>
+                <%= properti.cs %>
+              </div>
+
+              
+
+              <div class="mt-4">
+                <a href="property/<%= properti.slug %>" class="btn btn-primary mr-1   ">Deskripsi</a>
+                <a href="property/edit/<%= properti.id %>" class="btn btn-info mr-1">Edit</a>
+                <form action="/property/<%= properti.id %>?_method=DELETE" method="POST" class="d-inline">
+                  <button type="submit" class="btn btn-danger">Delete</button>
+                </form>
+              </div>
+            </div>
+          </div>
+        <% }) %> 
+      </div>

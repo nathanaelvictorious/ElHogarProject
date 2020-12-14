@@ -3,7 +3,7 @@ const path = require('path');
 //const propertyRouter = require('./routes/router.js');
 const mongoose = require('mongoose');
 const app = express();
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 3000
 
 const Property = require('./models/property.js');
 
@@ -13,8 +13,8 @@ app.set('views', (__dirname, './views'));
 
 
 app.get('/', async (req, res) => {
-    /*const location = await Property.find().distinct('lokasi')
-    console.log(location)*/
+    const location = await Property.find().distinct('lokasi')
+    console.log(location)
     res.render('home.ejs', {location: location})
 })
 

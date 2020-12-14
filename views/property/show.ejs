@@ -1,10 +1,12 @@
-<%- include ("../partials/nav"); %>
 
-<div class="container mt-4 mb-5">
-  <h1 class="mb-4"><%= properti.nama %> </h1>
-  <a href="/admin" class="btn btn-secondary">All Property</a>
-  <a href="/property/edit/<%= properti.id %> " class="btn btn-info">Edit</a>
-  <div class="mt-4">
-    <%- properti.sanitizedHtml %>
-  </div>
-</div>
+    <%- include ("../partials/nav"); %>
+
+    <div class="container mt-4 mb-5">
+        <h1 class="mb-4"><%= properti.nama %> </h1>
+        <a href="/admin" class="btn btn-secondary">All Property</a>
+        <a href="/property/edit/<%= properti.id %> " class="btn btn-info">Edit</a>
+
+        <div class="mt-4">
+            <%- properti.sanitizedHtml %>
+        </div>
+    </div>

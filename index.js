@@ -70,7 +70,7 @@ app.get('/search', async (req, res) => {
 
         const properties = await Properti.find({
             $or: [
-                {$or: [{nama: {$regex: Keyword, $options: 'i'}}, {desc: {$regex: Keyword, $options: 'i'}}]},
+                {$or: [{nama: {$regex: Keyword, $options: 'i'}}, {deskripsi: {$regex: Keyword, $options: 'i'}}]},
                 {jenis: {$eq: Jenis},
                  lokasi: {$eq: Lokasi},
                  kt: {$eq: Kt},
@@ -78,8 +78,7 @@ app.get('/search', async (req, res) => {
                  cs: {$eq: Carslot},
                  harga: {$gt: 0, $lte: Price}}
             ]
-        }) 
-        console.log(properties)
+        })
         res.render('property-grid.ejs', {properties: properties})
     } catch (err) {
     console.error(err);

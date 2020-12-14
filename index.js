@@ -20,7 +20,6 @@ const session = require("express-session");
 const passport = require("passport");
 
 const Property = require('./models/property.js');
-const Properti = require('./models/properti.js')
 
 app.use(express.static(path.join(__dirname, '/public')));
 app.set('view engine', 'ejs');

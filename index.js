@@ -37,7 +37,6 @@ app.get('/aboutus', (req, res) => {
 })
 
 app.get('/property', async (req, res) => {
-    const location = await Property.find().distinct('lokasi')
     const properties = await Property.find()
     res.render('property-grid.ejs', {properties: properties})
 });

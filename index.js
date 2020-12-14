@@ -86,6 +86,11 @@ app.get('/search', async (req, res) => {
     }
 })
 
+app.get('/property/:id', async (req, res) => {
+    const properties = await Properti.find()
+    res.render('property-grid.ejs', {properties: properties})
+});
+
 app.use('/css', express.static(__dirname + 'public/css'))
 
 app.use(expressLayouts);
